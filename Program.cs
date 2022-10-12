@@ -23,7 +23,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine(toplaSonucu);
             //Metot aşırı yükleme~Overloading
             int ifade=999;
-            Console.WriteLine(ifade);
+            instance.EkranaYazdir(Convert.ToString(ifade));
+            instance.EkranaYazdir(ifade);
+            instance.EkranaYazdir("Ali","KIZILDAŞ");
+
+            //Metot imzası
+            //Metot adı+parametre sayısı+parametre
 
         }
     }
@@ -38,6 +43,15 @@ namespace MyApp // Note: actual namespace depends on the project name.
         public void EkranaYazdir(string veri)
         {
             Console.WriteLine(veri);
+        }
+
+        public void EkranaYazdir(int veri)
+        {
+            Console.WriteLine(veri);
+        }
+        public void EkranaYazdir(string veri1, string veri2)
+        {
+            Console.WriteLine(veri1+veri2);
         }
 
     }
